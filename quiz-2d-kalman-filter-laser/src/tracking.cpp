@@ -91,12 +91,13 @@ void Tracking::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
 	//4. Call the Kalman Filter update() function
 	// with the most recent raw measurements_
     kf_.Update(measurement_pack.raw_measurements_);
-	
+
+/*    
 	std::cout << "\n####\nF_= \n" << kf_.F_ << std::endl;
 	std::cout << "\n####\nG= \n" << G << std::endl;
 	std::cout << "\n####\nQv= \n" << Qv << std::endl;
 	std::cout << "\n####\nQ_= \n" << kf_.Q_ << std::endl;
-
+*/
 	std::cout << "\n####\nx_= \n" << kf_.x_ << std::endl;
 	std::cout << "\n####\nP_= \n" << kf_.P_ << std::endl;
 }

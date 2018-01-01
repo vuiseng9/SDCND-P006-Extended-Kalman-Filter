@@ -65,6 +65,7 @@ int main() {
 	//call the ProcessingMeasurement() function for each measurement
 	size_t N = measurement_pack_list.size();
 	for (size_t k = 0; k < N; ++k) {	//start filtering from the second frame (the speed is unknown in the first frame)
+        std::cout << "\n------------------ n: " << k << endl;
 		tracking.ProcessMeasurement(measurement_pack_list[k]);
 		
 	}
